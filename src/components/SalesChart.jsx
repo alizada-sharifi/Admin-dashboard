@@ -10,7 +10,7 @@ import {
 } from "recharts";
 import { motion } from "framer-motion";
 
-function SalesChart({ data, title, param }) {
+function SalesChart({ data, title, param, param2 }) {
   return (
     <motion.div
       className="bg-gray-800/50 backdrop-blur-md shadow-lg rounded-xl p-6 border border-gray-700 "
@@ -24,7 +24,7 @@ function SalesChart({ data, title, param }) {
         <ResponsiveContainer width={"100%"} height={"100%"}>
           <LineChart data={data}>
             <CartesianGrid strokeDasharray="3 3" stroke="#485563" />
-            <XAxis dataKey={"month"} stroke="#9ca3af" />
+            <XAxis dataKey={param} stroke="#9ca3af" />
             <YAxis stroke="#9ca3af" />
             <Tooltip
               contentStyle={{
@@ -35,13 +35,12 @@ function SalesChart({ data, title, param }) {
             />
             <Line
               type="monotone"
-              dataKey={param}
+              dataKey={param2}
               stroke="#6366f1"
-              strokeWidth={3}
+              strokeWidth={2}
               dot={{ fill: "#6366f1", strokeWidth: 2, r: 6 }}
               activeDot={{ r: 8, strokeWidth: 2 }}
             />
-            <Legend />
           </LineChart>
         </ResponsiveContainer>
       </div>

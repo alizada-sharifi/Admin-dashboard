@@ -147,7 +147,7 @@ function Users() {
 
         {/* ============= charts section ================= */}
         <div className=" grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8 ">
-          <SalesChart data={usersData} title={"User Growth"} param={"users"} />
+          <SalesChart data={usersData} title={"User Growth"} param2={"users"} param={"month"} />
           <UserActivity
             data={userActivityData}
             name={"name"}

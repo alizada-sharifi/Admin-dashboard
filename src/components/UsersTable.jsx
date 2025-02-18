@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Search, Trash2, Edit } from "lucide-react";
 
 function UsersTable() {
+  const titles = ["name", "email", "role", "status", "Actions"];
   const usersData = [
     {
       id: 1,
@@ -82,21 +83,14 @@ function UsersTable() {
         <table className="min-w-full divide-y divide-gray-700">
           <thead>
             <tr>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">
-                Name
-              </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">
-                Email
-              </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">
-                Role
-              </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">
-                Status
-              </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">
-                Actions
-              </th>
+              {titles.map((title, index) => (
+                <th
+                  className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider"
+                  key={titles[index]}
+                >
+                  {title}
+                </th>
+              ))}
             </tr>
           </thead>
 
@@ -122,17 +116,14 @@ function UsersTable() {
                     </div>
                   </div>
                 </td>
-
                 <td className="px-6 py-4 whitespace-nowrap">
                   <div className="text-sm text-gray-300">{user.email}</div>
                 </td>
-
                 <td className="px-6 py-4 whitespace-nowrap">
                   <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-800 text-blue-100">
                     {user.role}
                   </span>
                 </td>
-
                 <td className="px-6 py-4 whitespace-nowrap">
                   <span
                     className={` px-2 inline-flex text-xs leading-5 font-semibold rounded-full  text-blue-100 
@@ -144,7 +135,6 @@ function UsersTable() {
                     {user.status}
                   </span>
                 </td>
-
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">
                   <button className="text-indigo-400 hover:text-indigo-300 mr-2">
                     <Edit size={18} />
@@ -159,8 +149,6 @@ function UsersTable() {
         </table>
       </div>
     </motion.div>
-
-  
   );
 }
 

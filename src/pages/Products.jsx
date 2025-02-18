@@ -73,7 +73,8 @@ function Products() {
           <SalesChart
             data={salesDate}
             title={"Sales Overview"}
-            param={"sales"}
+            param2={"sales"}
+            param={"month"}
           />
           <CategoryDistributionChart
             title={"Category Distribution"}
