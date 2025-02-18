@@ -35,17 +35,24 @@ function Overview() {
     },
   ];
   const salesDate = [
-    { name: "Jul", sales: 3470 },
-    { name: "Aug", sales: 3100 },
-    { name: "Sep", sales: 5100 },
-    { name: "Oct", sales: 4800 },
-    { name: "Nov", sales: 5200 },
-    { name: "Dec", sales: 5470 },
-    { name: "Jan", sales: 6000 },
-    { name: "Feb", sales: 5890 },
-    { name: "Mar", sales: 6800 },
-    { name: "Apr", sales: 6300 },
-    { name: "Jun", sales: 7000 },
+    { month: "Jul", sales: 3470 },
+    { month: "Aug", sales: 3100 },
+    { month: "Sep", sales: 5100 },
+    { month: "Oct", sales: 4800 },
+    { month: "Nov", sales: 5200 },
+    { month: "Dec", sales: 5470 },
+    { month: "Jan", sales: 6000 },
+    { month: "Feb", sales: 5890 },
+    { month: "Mar", sales: 6800 },
+    { month: "Apr", sales: 6300 },
+    { month: "Jun", sales: 7000 },
+  ];
+  const categoryData = [
+    { name: "Electronics", value: 4500 },
+    { name: "Clothing", value: 3200 },
+    { name: "Home & Garden", value: 2800 },
+    { name: "Books", value: 2100 },
+    { name: "Sports & Outdoors", value: 1900 },
   ];
 
   return (
@@ -67,8 +74,16 @@ function Overview() {
 
         {/* ================= charts section ================ */}
         <div className=" grid grid-cols-1 lg:grid-cols-2 gap-8 ">
-          <SalesChart salesDate={salesDate} title={"Sales Overview"} />
-          <CategoryDistributionChart />
+          <SalesChart
+            data={salesDate}
+            title={"Sales Overview"}
+            param={"sales"}
+          />
+          <CategoryDistributionChart
+            title={"Category Distribution"}
+            data={categoryData}
+            labelLine={false}
+          />
           <SalesChannelChart />
         </div>
       </main>

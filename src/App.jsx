@@ -1,6 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import Overview from "./pages/Overview";
-import Products from "./pages/Products";
+import { Overview, Products, Users } from "./pages";
 import Sidebar from "./components/Sidebar";
 
 function App() {
@@ -19,6 +18,7 @@ function App() {
         <Routes>
           <Route element={<Overview />} path="/" />
           <Route element={<Products />} path="/products" />
+          <Route element={<Users />} path="/users" />
         </Routes>
       </div>
     </>
