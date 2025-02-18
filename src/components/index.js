@@ -7,3 +7,4 @@ export { default as SalesChannelChart } from "./SalesChannelChart";
 export { default as ProductTable } from "./ProductTable";
 export { default as UsersTable } from "./UsersTable";
 export { default as UserActivity } from "./UserActivity";
+export { default as SalesOverviewChart } from "./SalesOverviewChart";

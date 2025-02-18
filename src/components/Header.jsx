@@ -1,5 +1,3 @@
-import React from "react";
-
 function Header({ title }) {
   return (
     <header className="bg-gray-800/50 backdrop-blur-sm shadow-lg border-b border-gray-700">
