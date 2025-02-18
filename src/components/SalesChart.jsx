@@ -6,24 +6,11 @@ import {
   CartesianGrid,
   Tooltip,
   ResponsiveContainer,
+  Legend,
 } from "recharts";
 import { motion } from "framer-motion";
 
-const salesDate = [
-  { name: "Jul", sales: 3470 },
-  { name: "Aug", sales: 3100 },
-  { name: "Sep", sales: 5100 },
-  { name: "Oct", sales: 4800 },
-  { name: "Nov", sales: 5200 },
-  { name: "Dec", sales: 5470 },
-  { name: "Jan", sales: 6000 },
-  { name: "Feb", sales: 5890 },
-  { name: "Mar", sales: 6800 },
-  { name: "Apr", sales: 6300 },
-  { name: "Jun", sales: 7000 },
-];
-
-function SalesChart() {
+function SalesChart({ salesDate, title }) {
   return (
     <motion.div
       className="bg-gray-800/50 backdrop-blur-md shadow-lg rounded-xl p-6 border border-gray-700 "
@@ -31,13 +18,13 @@ function SalesChart() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.3 }}
     >
-      <h2 className="text-lg font-medium mb-4 text-gray-100">Sales Overview</h2>
+      <h2 className="text-lg font-medium mb-4 text-gray-100">{title}</h2>
 
       <div className="h-80">
         <ResponsiveContainer width={"100%"} height={"100%"}>
           <LineChart data={salesDate}>
             <CartesianGrid strokeDasharray="3 3" stroke="#485563" />
-            <XAxis dataKey={"name"} stroke="#9ca3af"  />
+            <XAxis dataKey={"name"} stroke="#9ca3af" />
             <YAxis stroke="#9ca3af" />
             <Tooltip
               contentStyle={{
@@ -54,6 +41,7 @@ function SalesChart() {
               dot={{ fill: "#6366f1", strokeWidth: 2, r: 6 }}
               activeDot={{ r: 8, strokeWidth: 2 }}
             />
+            <Legend />
           </LineChart>
         </ResponsiveContainer>
       </div>

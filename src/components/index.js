@@ -1,3 +1,7 @@
+export { default as Sidebar } from "./Sidebar";
+export { default as Header } from "./Header";
+export { default as StatCard } from "./StatCard";
 export { default as SalesChart } from "./SalesChart";
 export { default as CategoryDistributionChart } from "./CategoryDistributionChart";
 export { default as SalesChannelChart } from "./SalesChannelChart";
+export { default as ProductTable } from "./ProductTable";

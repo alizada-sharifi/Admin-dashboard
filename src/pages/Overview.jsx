@@ -1,13 +1,12 @@
 import { motion } from "framer-motion";
 import { Zap, Users, ShoppingBag, ChartNoAxesColumn } from "lucide-react";
-
-import Header from "../components/Header";
-import StatCard from "../components/StatCard";
 import {
+  Header,
+  StatCard,
   SalesChart,
   CategoryDistributionChart,
   SalesChannelChart,
-} from "../components/overview";
+} from "../components";
 function Overview() {
   const StatCardInfo = [
     {
@@ -35,6 +34,19 @@ function Overview() {
       color: "#10b981",
     },
   ];
+  const salesDate = [
+    { name: "Jul", sales: 3470 },
+    { name: "Aug", sales: 3100 },
+    { name: "Sep", sales: 5100 },
+    { name: "Oct", sales: 4800 },
+    { name: "Nov", sales: 5200 },
+    { name: "Dec", sales: 5470 },
+    { name: "Jan", sales: 6000 },
+    { name: "Feb", sales: 5890 },
+    { name: "Mar", sales: 6800 },
+    { name: "Apr", sales: 6300 },
+    { name: "Jun", sales: 7000 },
+  ];
 
   return (
     <div className="flex-1 overflow-auto relative z-10">
@@ -55,9 +67,9 @@ function Overview() {
 
         {/* ================= charts section ================ */}
         <div className=" grid grid-cols-1 lg:grid-cols-2 gap-8 ">
-          <SalesChart />
+          <SalesChart salesDate={salesDate} title={"Sales Overview"} />
           <CategoryDistributionChart />
-          <SalesChannelChart /> 
+          <SalesChannelChart />
         </div>
       </main>
     </div>
