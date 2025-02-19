@@ -29,7 +29,7 @@ const UserActivityHeatmap = ({
       </h2>
       <div style={{ width: "100%", height: 300 }}>
         <ResponsiveContainer>
-          <BarChart data={data}>
+          <BarChart data={data}>  
             <CartesianGrid strokeDasharray="3 3" stroke="#374151" />
             <XAxis dataKey={name} stroke="#9CA3AF" />
             <YAxis stroke="#9CA3AF" />

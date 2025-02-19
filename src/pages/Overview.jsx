@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
 import { Zap, Users, ShoppingBag, ChartNoAxesColumn } from "lucide-react";
+
+import StatCard from "../components/StatCard";
 import {
-  Header,
-  StatCard,
   SalesChart,
-  CategoryDistributionChart,
   SalesChannelChart,
-} from "../components";
+  CategoryDistributionChart,
+} from "../components/charts";
+import Header from "../components/Header";
 function Overview() {
   const StatCardInfo = [
     {
@@ -57,7 +58,7 @@ function Overview() {
 
   return (
     <div className="flex-1 overflow-auto relative z-10">
-      <Header title="Overview" />
+      <Header title={"Overview"} />
 
       <main className="container py-6">
         {/* ==========statCards sectionn ============== */}

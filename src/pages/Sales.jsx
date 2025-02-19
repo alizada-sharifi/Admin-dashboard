@@ -1,10 +1,10 @@
+import  Header  from "../components/Header";
+import  StatCard  from "../components/StatCard";
 import {
   CategoryDistributionChart,
-  Header,
   SalesOverviewChart,
-  StatCard,
   UserActivity,
-} from "../components";
+} from "../components/charts";
 import { motion } from "framer-motion";
 import { DollarSign, ShoppingCart, TrendingUp, CreditCard } from "lucide-react";
 
@@ -65,6 +65,45 @@ function Sales() {
     "#10b981",
     "#10b981",
   ];
+  const weeklySalesData = [
+    { week: "Sun", sales: 10 },
+    { week: "Mon", sales: 20 },
+    { week: "Tue", sales: 30 },
+    { week: "Wed", sales: 25 },
+    { week: "Thu", sales: 32 },
+    { week: "Fri", sales: 40 },
+    { week: "Sat", sales: 30 },
+  ];
+
+  const monthlySalesData = [
+    { month: "Jan", sales: 1000 },
+    { month: "Feb", sales: 1030 },
+    { month: "Mar", sales: 1230 },
+    { month: "Apr", sales: 1460 },
+    { month: "May", sales: 2000 },
+    { month: "Jun", sales: 2100 },
+    { month: "Jul", sales: 2110 },
+    { month: "Aug", sales: 2002 },
+    { month: "Sep", sales: 4000 },
+    { month: "Oct", sales: 1900 },
+    { month: "Nov", sales: 3500 },
+    { month: "Dec", sales: 2000 },
+  ];
+
+  const quarterlySalesData = [
+    { season: "Spring", sales: 10000 },
+    { season: "Summer", sales: 14000 },
+    { season: "Fall", sales: 23000 },
+    { season: "Winter", sales: 14000 },
+  ];
+
+  const yearlySalesData = [
+    { year: "2020", sales: 100000 },
+    { year: "2021", sales: 200000 },
+    { year: "2022", sales: 300000 },
+    { year: "2023", sales: 105000 },
+    { year: "2024", sales: 230000 },
+  ];
 
   return (
     <div className="flex-1 overflow-auto relative z-10">
@@ -84,7 +123,13 @@ function Sales() {
         </motion.div>
 
         {/* ================= charts section ================ */}
-        <SalesOverviewChart />
+        <SalesOverviewChart
+          weeklySalesData={weeklySalesData}
+          monthlySalesData={monthlySalesData}
+          quarterlySalesData={quarterlySalesData}
+          yearlySalesData={yearlySalesData}
+          params={["sales"]}
+        />
 
         <div className=" grid grid-cols-1 lg:grid-cols-2 gap-8 ">
           <CategoryDistributionChart

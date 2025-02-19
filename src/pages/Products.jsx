@@ -1,12 +1,9 @@
 import { AlertTriangle, DollarSign, Package, TrendingUp } from "lucide-react";
 import { motion } from "framer-motion";
-import {
-  SalesChart,
-  CategoryDistributionChart,
-  ProductTable,
-  Header,
-  StatCard,
-} from "../components";
+import  Header  from "../components/Header";
+import  StatCard  from "../components/StatCard";
+import { ProductTable } from "../components/tables";
+import { CategoryDistributionChart, SalesChart } from "../components/charts";
 
 function Products() {
   const StatCardInfo = [

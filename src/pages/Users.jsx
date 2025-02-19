@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
 import { User2Icon, UserCheck, UserPlus, UserX } from "lucide-react";
+import Header from "../components/Header";
+import StatCard from "../components/StatCard";
+import { UsersTable } from "../components/tables";
 import {
-  StatCard,
-  Header,
-  UsersTable,
   SalesChart,
   UserActivity,
   CategoryDistributionChart,
-} from "../components";
+} from "../components/charts";
 
 function Users() {
   const StatCardInfo = [
@@ -147,7 +147,12 @@ function Users() {
 
         {/* ============= charts section ================= */}
         <div className=" grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8 ">
-          <SalesChart data={usersData} title={"User Growth"} param2={"users"} param={"month"} />
+          <SalesChart
+            data={usersData}
+            title={"User Growth"}
+            param2={"users"}
+            param={"month"}
+          />
           <UserActivity
             data={userActivityData}
             name={"name"}

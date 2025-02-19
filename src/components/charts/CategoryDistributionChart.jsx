@@ -8,7 +8,14 @@ import {
   Legend,
 } from "recharts";
 
-const COLORS = ["#6366F1", "#8B5CF6", "#EC4899", "#10B981", "#F59E0B"];
+const COLORS = [
+  "#6366F1",
+  "#8B5CF6",
+  "#EC4899",
+  "#10B981",
+  "#F59E0B",
+  "#10B966",
+];
 
 const CategoryDistributionChart = ({ title, data, labelLine }) => {
   return (

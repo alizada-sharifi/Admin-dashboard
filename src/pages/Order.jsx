@@ -1,12 +1,9 @@
 import { CircleCheck, Clock, DollarSign, ShoppingBag } from "lucide-react";
 import { motion } from "framer-motion";
-import {
-  CategoryDistributionChart,
-  Header,
-  SalesChart,
-  StatCard,
-} from "../components";
-import OrderTable from "../components/OrderTable";
+import  Header  from "../components/Header";
+import  StatCard  from "../components/StatCard";
+import { OrderTable } from "../components/tables";
+import { CategoryDistributionChart, SalesChart } from "../components/charts";
 
 const StatCardInfo = [
   {

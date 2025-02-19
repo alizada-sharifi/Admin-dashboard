@@ -1,5 +1,13 @@
 import { Route, Routes } from "react-router-dom";
-import { Order, Overview, Products, Sales, Users } from "./pages";
+import {
+  Analytics,
+  Order,
+  Overview,
+  Products,
+  Sales,
+  Setting,
+  Users,
+} from "./pages";
 import Sidebar from "./components/Sidebar";
 
 function App() {
@@ -21,6 +29,8 @@ function App() {
           <Route element={<Users />} path="/users" />
           <Route element={<Sales />} path="/sales" />
           <Route element={<Order />} path="/orders" />
+          <Route element={<Analytics />} path="/analytics" />
+          <Route element={<Setting />} path="/settings" />
         </Routes>
       </div>
     </>

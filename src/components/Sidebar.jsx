@@ -58,7 +58,7 @@ function Sidebar() {
     },
   ];
 
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   return (
     <motion.div
