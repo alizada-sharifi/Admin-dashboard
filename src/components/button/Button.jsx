@@ -1,7 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
-function Button({ text, background, path }) {
+function Button({ text, background }) {
   return (
     <button
       className={`${background} text-white font-bold py-2 px-4 rounded transition duration-200 w-full sm:w-auto ${
@@ -10,7 +9,7 @@ function Button({ text, background, path }) {
           : "hover:bg-red-700"
       } `}
     >
-      <Link to={path}>{text}</Link>
+      {text}
     </button>
   );
 }
