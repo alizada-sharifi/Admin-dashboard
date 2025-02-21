@@ -74,7 +74,7 @@ function Sidebar() {
           onClick={() => setIsSidebarOpen(!isSidebarOpen)}
           className="p-2 rounded-full hover:bg-gray-700 transition-colors max-w-fit"
         >
-          <Menu size={24} />
+          <Menu size={24} className="hidden lg:block" />
         </motion.button>
 
         <nav className="mt-8 flex-grow-">
@@ -100,7 +100,7 @@ function Sidebar() {
                     </motion.span>
                   )}
                 </AnimatePresence>
-              </motion.div> 
+              </motion.div>
             </Link>
           ))}
         </nav>

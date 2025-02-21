@@ -1,8 +1,15 @@
 import { motion } from "framer-motion";
-import { User2Icon, UserCheck, UserPlus, UserX } from "lucide-react";
+import {
+  User2Icon,
+  UserCheck,
+  UserPlus,
+  UserX,
+  Edit,
+  Trash2,
+} from "lucide-react";
 import Header from "../components/Header";
 import StatCard from "../components/StatCard";
-import { UsersTable } from "../components/tables";
+import { Table } from "../components/tables";
 import {
   SalesChart,
   UserActivity,
@@ -125,6 +132,45 @@ function Users() {
     "#3B82F6",
   ];
   const keys = Object.keys(userActivityData[0]).filter((key) => key !== "name");
+  const titles = ["name", "email", "role", "status", "Actions"];
+  const users = [
+    {
+      id: 1,
+      name: "Jane Smith",
+      email: "jane@example.com",
+      role: "Admin",
+      status: "Active",
+    },
+    {
+      id: 2,
+      name: "John Doe",
+      email: "john@example.com",
+      role: "Customer",
+      status: "Active",
+    },
+
+    {
+      id: 3,
+      name: "Bob Johnson",
+      email: "bob@example.com",
+      role: "Customer",
+      status: "Inactive",
+    },
+    {
+      id: 4,
+      name: "Alice Brown",
+      email: "alice@example.com",
+      role: "Customer",
+      status: "Active",
+    },
+    {
+      id: 5,
+      name: "Akbar Ahmadi",
+      email: "akbar@example.com",
+      role: "Moderator",
+      status: "Active",
+    },
+  ];
 
   return (
     <div className="flex-1 overflow-auto relative z-10">
@@ -143,7 +189,83 @@ function Users() {
           ))}
         </motion.div>
 
-        <UsersTable />
+        <Table
+          title="Users List"
+          placeholder="Search Users..."
+          data={users}
+          param1="name"
+          param2="role"
+        >
+          {(filteredData) => (
+            <>
+              <thead>
+                <tr>
+                  {titles.map((title, index) => (
+                    <th
+                      className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider"
+                      key={titles[index]}
+                    >
+                      {title}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+
+              <tbody className="divide-y divide-gray-700">
+                {filteredData.map((user) => (
+                  <motion.tr
+                    key={user.id}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <td className="px-6 py-4 whitespace-nowrap ">
+                      <div className="flex items-center">
+                        <div className="flex-shrink-0 size-10 ">
+                          <div className="size-10 rounded-full bg-gradient-to-r from-purple-400 to-blue-500 flex items-center justify-center text-white font-semibold ">
+                            {user.name.charAt(0)}
+                          </div>
+                        </div>
+                        <div className="ml-4">
+                          <div className="text-sm font-medium text-gray-100">
+                            {user.name}
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <div className="text-sm text-gray-300">{user.email}</div>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-800 text-blue-100">
+                        {user.role}
+                      </span>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <span
+                        className={` px-2 inline-flex text-xs leading-5 font-semibold rounded-full  text-blue-100 
+                      ${
+                        user.status === "Active" ? "bg-green-800" : "bg-red-800"
+                      }
+                    } `}
+                      >
+                        {user.status}
+                      </span>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">
+                      <button className="text-indigo-400 hover:text-indigo-300 mr-2">
+                        <Edit size={18} />
+                      </button>
+                      <button className="text-red-400 hover:text-red-300">
+                        <Trash2 size={18} />
+                      </button>
+                    </td>
+                  </motion.tr>
+                ))}
+              </tbody>
+            </>
+          )}
+        </Table>
 
         {/* ============= charts section ================= */}
         <div className=" grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8 ">

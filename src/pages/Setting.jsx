@@ -8,6 +8,7 @@ import facebook from "../assets/img/facebook.svg";
 import google from "../assets/img/google.png";
 import x from "../assets/img/x.png";
 import DangerZone from "../components/DangerZone";
+import Profile from "../components/Profile";
 
 function ToggleSwitch({ id, label }) {
   return (
@@ -58,24 +59,7 @@ function Setting() {
       <Header title="Settings" />
 
       <main className="container py-6 lg:max-w-5xl mx-auto space-y-8">
-        <SettingSection icon={User} title="Profile">
-          <div className="flex flex-col md:flex-row md:items-center gap-4">
-            <img
-              src={img}
-              alt="Profile"
-              className="size-14 md:size-24 object-cover object-center rounded-full"
-            />
-            <div>
-              <h3 className="text-xl font-semibold text-gray-100 capitalize">
-                Alizada Sharifi
-              </h3>
-              <p className="text-gray-400 text-sm">
-                alizadasharifi2005@gmail.com
-              </p>
-            </div>
-          </div>
-          <Button text="Edit Profile" background="bg-indigo-600" />
-        </SettingSection>
+        <Profile />
 
         <SettingSection icon={Bell} title="Notification">
           <ul className="space-y-5">
@@ -101,7 +85,11 @@ function Setting() {
               />
             </li>
           </ul>
-          <Button text="Change Password" background="bg-indigo-600" />
+          <Button
+            text="Change Password"
+            background="bg-indigo-600"
+            path={"/changePassword"}
+          />
         </SettingSection>
 
         <SettingSection icon={CircleHelp} title="Connected Accounts">

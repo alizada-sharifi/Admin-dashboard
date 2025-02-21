@@ -47,10 +47,6 @@ function AIPoweredInsights() {
             </div>
             <p className="text-gray-300 ">{item.insight}</p>
           </div>
-          // <li className="flex gap-3 items-center">
-          //   {<insight.icon className={`${insight.color}  `} />}
-          //   <span className="text-gray-300">{insight.insight}</span>
-          // </li>
         ))}
       </ul>
     </motion.div>

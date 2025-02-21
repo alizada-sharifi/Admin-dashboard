@@ -18,7 +18,11 @@ function DangerZone() {
       <p className="text-gray-300 my-4">
         Permanently delete your account and all of your content.
       </p>
-      <Button text={"Delete Account"} background={"bg-red-600"} />
+      <Button
+        text={"Delete Account"}
+        background={"bg-red-600"}
+        path={"/deleteAccount"}
+      />
     </motion.div>
   );
 }
