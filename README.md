@@ -2,7 +2,8 @@
 
 A modern and responsive admin dashboard designed for managing and monitoring various data points. Built with HTML, CSS, and JavaScript, this dashboard provides an intuitive interface for users to track key metrics and visualize data efficiently.
 
-![Admin Dashboard Screenshot](https://example.com/path-to-your-image.png)  
+![Image Description](https://github.com/alizada-sharifi/Admin-dashboard/blob/main/src/assets/img/image1.png?raw=true)
+
 _Above is a preview of the Admin Dashboard._
 
 ## Features
@@ -14,7 +15,7 @@ _Above is a preview of the Admin Dashboard._
 - **Clean and Intuitive UI**: Focused on user experience with easy navigation and clear layout.
 - **Customizable Widgets**: Allow users to customize the dashboard widgets according to their needs.
 
-![Responsive Dashboard](https://example.com/path-to-responsive-image.png)  
+![Image Description](https://github.com/alizada-sharifi/Admin-dashboard/blob/main/src/assets/img/image2.png?raw=true)
 _The dashboard is fully responsive and works on various screen sizes._
 
 ## Tech Stack
