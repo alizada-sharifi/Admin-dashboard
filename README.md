@@ -2,9 +2,6 @@
 
 A modern and responsive admin dashboard designed for managing and monitoring various data points. Built with HTML, CSS, and JavaScript, this dashboard provides an intuitive interface for users to track key metrics and visualize data efficiently.
 
-![Image Description](https://github.com/alizada-sharifi/Admin-dashboard/blob/main/src/assets/img/image1.png?raw=true)
-
-_Above is a preview of the Admin Dashboard._
 
 ## Features
 
@@ -15,8 +12,6 @@ _Above is a preview of the Admin Dashboard._
 - **Clean and Intuitive UI**: Focused on user experience with easy navigation and clear layout.
 - **Customizable Widgets**: Allow users to customize the dashboard widgets according to their needs.
 
-![Image Description](https://github.com/alizada-sharifi/Admin-dashboard/blob/main/src/assets/img/image2.png?raw=true)
-_The dashboard is fully responsive and works on various screen sizes._
 
 ## Tech Stack
 
@@ -24,13 +19,6 @@ _The dashboard is fully responsive and works on various screen sizes._
 - **CSS**: For styling and creating the responsive design.
 - **JavaScript**: For interactive elements and dynamic data updates.
 - **Chart.js**: For creating dynamic and interactive charts.
-- **Bootstrap**: Used for grid system and additional styling elements.
+- **Tailwind**: Used for grid system and additional styling elements.
 
-## Getting Started
 
-To get a local copy of this project, follow these steps:
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/alizada-sharifi/Admin-dashboard.git
-   ```
