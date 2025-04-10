@@ -9,39 +9,38 @@ import {
   Setting,
   Users,
 } from "../pages";
-import ROUTES from "./routePath";
 
 const MainRouter = [
   {
-    path: ROUTES.OVERVIEW,
+    path: "/",
     element: <MainLayout />,
     children: [
       {
-        index: true,
+        path: "",
         element: <Overview />,
       },
       {
-        path: ROUTES.PRODUCTS,
+        path: "products",
         element: <Products />,
       },
       {
-        path: ROUTES.USERS,
+        path: "users",
         element: <Users />,
       },
       {
-        path: ROUTES.SALES,
+        path: "sales",
         element: <Sales />,
       },
       {
-        path: ROUTES.ORDERS,
+        path: "orders",
         element: <Order />,
       },
       {
-        path: ROUTES.ANALYTICS,
+        path: "analytics",
         element: <Analytics />,
       },
       {
-        path: ROUTES.SETTING,
+        path: "settings",
         element: <Setting />,
       },
       {
@@ -51,4 +50,5 @@ const MainRouter = [
     ],
   },
 ];
+
 export default MainRouter;
