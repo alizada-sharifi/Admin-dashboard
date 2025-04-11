@@ -1,5 +1,7 @@
 # Admin Dashboard
 
+A modern and responsive admin dashboard designed for managing and monitoring various data points. Built with React, this dashboard provides an intuitive interface for users to track key metrics and visualize data efficiently.
+
 ## Tools
 
 - Reactjs: Base
